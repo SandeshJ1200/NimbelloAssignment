@@ -26,3 +26,8 @@ replay_pid*
 #target folder
 test-output/*
 target/*
+
+# misc files
+.classpath
+.project
+.settings/
