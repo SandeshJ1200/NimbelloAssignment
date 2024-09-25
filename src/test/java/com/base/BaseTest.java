@@ -7,8 +7,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.ITestContext;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Parameters;
 
 import com.utils.AppConstants;
@@ -48,6 +50,11 @@ public class BaseTest {
 		return tlDriver.get();
 	}
 	
+//	@BeforeSuite
+//	public void before(ITestContext ctx) {
+//	  ctx.getCurrentXmlTest().getSuite().getParameters().put("browser",System.getProperty("browser"));
+//	}
+	
 	@Parameters("browser")
 	@BeforeMethod
 	protected void launchBrowser(String browserName) throws Exception {
@@ -84,5 +91,6 @@ public class BaseTest {
 	protected void quitBrowser() {
 		driver.quit();
 	}
+	
 
 }

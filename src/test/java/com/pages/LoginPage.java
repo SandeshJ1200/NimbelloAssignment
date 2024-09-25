@@ -20,13 +20,11 @@ public class LoginPage {
 
 	public void enterUsername() {
 		String usernameToEnter = driver.findElement(username).getText().split(":")[1].trim();
-		System.out.println(usernameToEnter);
 		driver.findElement(usernameField).sendKeys(usernameToEnter);
 	}
 
 	public void enterPassword() {
 		String passwordToEnter = driver.findElement(password).getText().split(":")[1].trim();
-		System.out.println(passwordToEnter);
 		driver.findElement(passwordField).sendKeys(passwordToEnter);
 	}
 	
